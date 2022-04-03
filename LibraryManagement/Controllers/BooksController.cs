@@ -1,21 +1,17 @@
 ﻿using LibraryManagement.Models;
-using LibraryManagement.Services;
 using LibraryManagement.Services.IServices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace LibraryManagement.Controllers
 {   [ApiController]
     [Route("api/[controller]")]
     public class BooksController : ControllerBase
     { 
-        private readonly BooksService _bookService;
+        private readonly IBookService _bookService;
 
-        public BooksController(BooksService bookService)
+        public BooksController(IBookService bookService)
         {
             _bookService = bookService;
         }

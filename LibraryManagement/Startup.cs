@@ -3,17 +3,10 @@ using LibraryManagement.Services;
 using LibraryManagement.Services.IServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LibraryManagement
 {
@@ -31,9 +24,6 @@ namespace LibraryManagement
             services.AddDbContext<LibraryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LibraryDB")));
             services.AddControllers();
             services.AddTransient<IBookService, BooksService>();
-            services.AddTransient<IBorrowingService, BorrowingsService>();
-            services.AddTransient<IStudentService, StudentsService>();
-            services.AddTransient<IUserService, UsersService>();
             services.AddHttpContextAccessor();
 
         }
