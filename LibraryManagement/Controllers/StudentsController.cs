@@ -10,7 +10,7 @@ namespace LibraryManagement.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class StudentsController : Controller
+    public class StudentsController : ControllerBase
     {
         private readonly IStudentService _studentService;
 

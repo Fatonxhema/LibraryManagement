@@ -10,7 +10,7 @@ namespace LibraryManagement.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BorrowingsController : Controller
+    public class BorrowingsController : ControllerBase
     {
         private readonly IBorrowingService _borrowingService;
 

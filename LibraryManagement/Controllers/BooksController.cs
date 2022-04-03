@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace LibraryManagement.Controllers
 {   [ApiController]
     [Route("api/[controller]")]
-    public class BooksController : Controller
+    public class BooksController : ControllerBase
     { 
         private readonly BooksService _bookService;
 

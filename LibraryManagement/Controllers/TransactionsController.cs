@@ -10,7 +10,7 @@ namespace LibraryManagement.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TransactionsController : Controller
+    public class TransactionsController : ControllerBase
     {
         private readonly ITransactionService _transactionService;
 
